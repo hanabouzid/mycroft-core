@@ -75,6 +75,7 @@ FROM builder as voigt_kampff
 ENV PATH /opt/mycroft/mycroft-core/.venv/bin:$PATH
 # Install required packages for test environments
 RUN mycroft-core/.venv/bin/python -m pip install -r mycroft-core/test-requirements.txt
+RUN mycroft-core/.venv/bin/python -m pip install mycroft-core/mycroft
 RUN mkdir ~/.mycroft/allure-result
 
 # Install Mark I default skills
