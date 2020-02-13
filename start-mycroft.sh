@@ -137,7 +137,6 @@ function launch-background() {
     fi
 
     # Launch process in background, sending logs to standard location
-    touch /var/log/mycroft/${1}.log
     python3 -m ${_module} $_params >> /var/log/mycroft/${1}.log 2>&1 &
 }
 

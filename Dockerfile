@@ -56,7 +56,7 @@ ENV LC_ALL en_US.UTF-8
 #   to only rebuild things that have changed since the last build.
 RUN mkdir /opt/mycroft
 WORKDIR /opt/mycroft
-RUN mkdir mycroft-core skills ~/.mycroft
+RUN mkdir mycroft-core skills ~/.mycroft /var/log/mycroft
 RUN python3 -m venv "/opt/mycroft/mycroft-core/.venv"
 RUN mycroft-core/.venv/bin/python -m pip install pip==20.0.2
 COPY requirements.txt mycroft-core
